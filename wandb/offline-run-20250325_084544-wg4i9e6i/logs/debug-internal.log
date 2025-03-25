@@ -1,0 +1,11 @@
+{"time":"2025-03-25T08:45:44.724132089+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/root/data1/EIDFNet/wandb/offline-run-20250325_084544-wg4i9e6i/logs/debug-core.log"}
+{"time":"2025-03-25T08:45:44.860922654+08:00","level":"INFO","msg":"created new stream","id":"wg4i9e6i"}
+{"time":"2025-03-25T08:45:44.860971949+08:00","level":"INFO","msg":"stream: started","id":"wg4i9e6i"}
+{"time":"2025-03-25T08:45:44.861219637+08:00","level":"INFO","msg":"sender: started","stream_id":"wg4i9e6i"}
+{"time":"2025-03-25T08:45:44.861109252+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"wg4i9e6i"}
+{"time":"2025-03-25T08:45:44.861358732+08:00","level":"INFO","msg":"handler: started","stream_id":"wg4i9e6i"}
+{"time":"2025-03-25T08:45:44.862659492+08:00","level":"INFO","msg":"stream: closing","id":"wg4i9e6i"}
+{"time":"2025-03-25T08:45:44.873578879+08:00","level":"INFO","msg":"handler: closed","stream_id":"wg4i9e6i"}
+{"time":"2025-03-25T08:45:44.873618543+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wg4i9e6i"}
+{"time":"2025-03-25T08:45:44.873648505+08:00","level":"INFO","msg":"sender: closed","stream_id":"wg4i9e6i"}
+{"time":"2025-03-25T08:45:44.875085+08:00","level":"INFO","msg":"stream: closed","id":"wg4i9e6i"}

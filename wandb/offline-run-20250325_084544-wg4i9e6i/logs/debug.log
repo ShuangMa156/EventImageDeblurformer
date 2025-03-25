@@ -1,0 +1,54 @@
+2025-03-25 08:45:44,114 INFO    MainThread:103212 [wandb_setup.py:_flush():67] Current SDK version is 0.19.7
+2025-03-25 08:45:44,114 INFO    MainThread:103212 [wandb_setup.py:_flush():67] Configure stats pid to 103212
+2025-03-25 08:45:44,114 INFO    MainThread:103212 [wandb_setup.py:_flush():67] Loading settings from /root/.config/wandb/settings
+2025-03-25 08:45:44,114 INFO    MainThread:103212 [wandb_setup.py:_flush():67] Loading settings from /root/data1/EIDFNet/wandb/settings
+2025-03-25 08:45:44,115 INFO    MainThread:103212 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-25 08:45:44,115 INFO    MainThread:103212 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /root/data1/EIDFNet/wandb/offline-run-20250325_084544-wg4i9e6i/logs/debug.log
+2025-03-25 08:45:44,115 INFO    MainThread:103212 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /root/data1/EIDFNet/wandb/offline-run-20250325_084544-wg4i9e6i/logs/debug-internal.log
+2025-03-25 08:45:44,224 INFO    MainThread:103212 [wandb_init.py:init():761] calling init triggers
+2025-03-25 08:45:44,224 INFO    MainThread:103212 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'name': 'EventImageDeblurformer_train', 'model_type': 'EventImageDeblurformer', 'scale': 1, 'num_gpu': 1, 'manual_seed': 100, 'datasets': OrderedDict([('train', OrderedDict([('name', 'highrev-train'), ('type', 'VoxelnpzPngSingleDeblurDataset'), ('dataroot', 'datasets/HighREV/train'), ('dataroot_voxel', 'datasets/HighREV/train/voxel'), ('gt_size', 384), ('norm_voxel', True), ('use_hflip', True), ('use_rot', True), ('filename_tmpl', '{}'), ('io_backend', OrderedDict([('type', 'disk')])), ('use_shuffle', True), ('num_worker_per_gpu', 1), ('batch_size_per_gpu', 1), ('dataset_enlarge_ratio', 4), ('prefetch_mode', 'cpu'), ('num_prefetch_queue', 2), ('mini_batch_sizes', [4, 3, 2, 2, 1, 1]), ('iters', [92000, 64000, 48000, 36000, 36000, 24000]), ('gt_sizes', [128, 160, 192, 256, 320, 384]), ('phase', 'train'), ('scale', 1)])), ('val', OrderedDict([('name', 'highrev-val'), ('type', 'VoxelnpzPngSingleDeblurDataset'), ('dataroot', 'datasets/HighREV/val'), ('dataroot_voxel', 'HighREV/val/voxel'), ('gt_size', None), ('norm_voxel', True), ('io_backend', OrderedDict([('type', 'disk')])), ('use_hflip', False), ('use_rot', False), ('phase', 'val'), ('scale', 1)]))]), 'dataset_name': 'HighREV', 'network_g': OrderedDict([('type', 'EventImageRestormer'), ('image_in_channels', 3), ('event_in_channels', 6), ('out_channels', 3), ('dim', 48), ('num_refinement_blocks', 4), ('heads', [1, 2, 4, 8]), ('ffn_expansion_factor', 2.66), ('bias', False), ('LayerNorm_type', 'WithBias')]), 'path': OrderedDict([('pretrain_network_g', None), ('strict_load_g', True), ('resume_state', None), ('root', '/root/data1/NTIRE2025_EventDeblur_challenge'), ('experiments_root', '/root/data1/NTIRE2025_EventDeblur_challenge/experiments/EventImageDeblurformer_train'), ('models', '/root/data1/NTIRE2025_EventDeblur_challenge/experiments/EventImageDeblurformer_train/models'), ('training_states', '/root/data1/NTIRE2025_EventDeblur_challenge/experiments/EventImageDeblurformer_train/training_states'), ('log', '/root/data1/NTIRE2025_EventDeblur_challenge/experiments/EventImageDeblurformer_train'), ('visualization', '/root/data1/NTIRE2025_EventDeblur_challenge/experiments/EventImageDeblurformer_train/visualization')]), 'train': OrderedDict([('total_iter', 300000), ('warmup_iter', -1), ('use_grad_clip', True), ('scheduler', OrderedDict([('type', 'CosineAnnealingRestartCyclicLR'), ('periods', [92000, 208000]), ('restart_weights', [1, 1]), ('eta_mins', [0.0003, 1e-06])])), ('mixing_augs', OrderedDict([('mixup', False), ('mixup_beta', 1.2), ('use_identity', True)])), ('optim_g', OrderedDict([('type', 'AdamW'), ('lr', 0.0003), ('weight_decay', 0.0001), ('betas', [0.9, 0.999])])), ('pixel_opt', OrderedDict([('type', 'L1Loss'), ('loss_weight', 1), ('reduction', 'mean')]))]), 'val': OrderedDict([('window_size', 8), ('val_freq', 1000.0), ('save_img', False), ('rgb2bgr', True), ('use_image', True), ('max_minibatch', 8), ('metrics', OrderedDict([('psnr', OrderedDict([('type', 'calculate_psnr'), ('crop_border', 0), ('test_y_channel', False)])), ('ssim', OrderedDict([('type', 'calculate_ssim'), ('crop_border', 0), ('test_y_channel', False)]))]))]), 'logger': OrderedDict([('print_freq', 200), ('save_checkpoint_freq', 1000.0), ('use_tb_logger', True), ('wandb', OrderedDict([('project', 'deblur_restormer1'), ('resume_id', None)]))]), 'dist_params': OrderedDict([('backend', 'nccl'), ('port', 29500), ('find_unused_parameters', True)]), 'is_train': True, 'dist': False, 'rank': 0, 'world_size': 1, '_wandb': {}}
+2025-03-25 08:45:44,224 INFO    MainThread:103212 [wandb_init.py:init():784] starting backend
+2025-03-25 08:45:44,224 INFO    MainThread:103212 [wandb_init.py:init():788] sending inform_init request
+2025-03-25 08:45:44,231 INFO    MainThread:103212 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-25 08:45:44,232 INFO    MainThread:103212 [wandb_init.py:init():803] backend started and connected
+2025-03-25 08:45:44,236 INFO    MainThread:103212 [wandb_init.py:init():896] updated telemetry
+2025-03-25 08:45:44,252 INFO    MainThread:103212 [wandb_init.py:init():920] communicating run to backend with 90.0 second timeout
+2025-03-25 08:45:44,536 WARNING MainThread:103212 [wandb_init.py:init():1475] interrupted
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1471, in init
+    return wi.init(run_settings, run_config)
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 946, in init
+    result = wait_with_progress(
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 23, in wait_with_progress
+    return wait_all_with_progress(
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 69, in wait_all_with_progress
+    return _wait_handles(handle_list, timeout=progress_after)
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 109, in _wait_handles
+    results.append(handle.wait_or(timeout=remaining_timeout))
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/mailbox/handles.py", line 107, in wait_or
+    if not self._event.wait(timeout=timeout):
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2025-03-25 08:45:44,861 WARNING MsgRouterThr:103212 [router.py:message_loop():77] message_loop has been closed
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/interface/router_sock.py", line 28, in _read_message
+    resp = self._sock_client.read_server_response(timeout=1)
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 285, in read_server_response
+    data = self._read_packet_bytes(timeout=timeout)
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 270, in _read_packet_bytes
+    raise SockClientClosedError
+wandb.sdk.lib.sock_client.SockClientClosedError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/interface/router.py", line 70, in message_loop
+    msg = self._read_message()
+  File "/root/anaconda3/envs/mambaIR/lib/python3.10/site-packages/wandb/sdk/interface/router_sock.py", line 30, in _read_message
+    raise MessageRouterClosedError from e
+wandb.sdk.interface.router.MessageRouterClosedError
+2025-03-25 08:45:44,863 INFO    MsgRouterThr:103212 [mailbox.py:close():115] Closing mailbox, abandoning 1 handles.

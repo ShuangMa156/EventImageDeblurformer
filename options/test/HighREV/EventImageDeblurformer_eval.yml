@@ -1,0 +1,77 @@
+# general settings
+name: EventImageDeblurformer_eval  # add debug for quick debug
+model_type: EventImageDeblurformerModel
+scale: 1
+num_gpu:  1 #4
+manual_seed: 10
+print_flops: true # TODO: set to true to print flops
+flops_input_shape: # TODO: keep spatial shape to 256x256, and set your own channel for events or images
+  - [3, 384, 384] # image shape
+  - [6, 384, 384] # event shape
+
+datasets:
+  test:
+    name: highrev-ntire-test
+    type: NpzPngSingleDeblurDataset_nogt
+    voxel_bins: 6
+    # dataroot: /work/lei_sun/HighREV/val
+    dataroot: datasets/HighREV_test
+    gt_size: ~
+    norm_voxel: true  
+
+    io_backend:
+      type: disk
+    
+    use_hflip: false
+    use_rot: false
+
+dataset_name: HighREV
+
+# network structures
+network_g:
+  type: EventImageRestormer
+  image_in_channels: 3
+  event_in_channels: 6
+  out_channels: 3
+  dim: 48
+  # num_blocks: [1,1,1,1]
+  num_refinement_blocks: 4
+  heads: [1,2,4,8]
+  ffn_expansion_factor: 2.66
+  bias: False
+  LayerNorm_type: WithBias
+
+# path
+path:
+  # pretrain_network_g: ./experiments/EFNet_highrev_single_deblur_debug/models/net_g_8.pth 
+  pretrain_network_g: model_zoo/12_EventImageDeblurformer.pth
+  strict_load_g: true
+  resume_state: ~
+  # root: /work/lei_sun/inference  # set this option ONLY in TEST!!!
+  root: test_result/HighREV  # set this option ONLY in TEST!!!
+
+
+# validation settings
+val:
+  save_img: true  # True for saving results
+  grids: ~  
+  crop_size: ~ # use it of the gpu memory is not enough for whole image inference
+  rgb2bgr: true  # false # to my h5 data, its false
+  # max_minibatch: 8  
+
+  # metrics:
+  #   psnr:
+  #     type: calculate_psnr
+  #     crop_border: 0
+  #     test_y_channel: false
+    
+  #   ssim:
+  #     type: calculate_ssim
+  #     crop_border: 0
+  #     test_y_channel: false   
+
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29500

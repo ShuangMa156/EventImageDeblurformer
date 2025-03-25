@@ -1,0 +1,45 @@
+-e git+ssh://git@github.com/ShuangMa156/NTIRE-2025-EIDFNet.git~@5a3ee28b51fec7eb38b198332ca638917ba19a2e#egg=basicsr
+brotlipy==0.7.0
+certifi @ file:///croot/certifi_1690232220950/work/certifi
+cffi @ file:///croot/cffi_1670423208954/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+cryptography @ file:///croot/cryptography_1694444244250/work
+einops==0.8.1
+filelock @ file:///croot/filelock_1672387128942/work
+fsspec==2025.3.0
+gmpy2 @ file:///tmp/build/80754af9/gmpy2_1645438755360/work
+huggingface-hub==0.29.3
+idna @ file:///croot/idna_1666125576474/work
+imageio==2.37.0
+Jinja2 @ file:///croot/jinja2_1666908132255/work
+lamdb==1.2.1
+lazy_loader==0.4
+lmdb==1.6.2
+MarkupSafe @ file:///opt/conda/conda-bld/markupsafe_1654597864307/work
+mkl-fft @ file:///croot/mkl_fft_1695058164594/work
+mkl-random @ file:///croot/mkl_random_1695059800811/work
+mkl-service==2.4.0
+mpmath @ file:///croot/mpmath_1690848262763/work
+networkx @ file:///croot/networkx_1690561992265/work
+numpy @ file:///croot/numpy_and_numpy_base_1691091611330/work
+opencv-python==4.11.0.86
+packaging==24.2
+Pillow @ file:///croot/pillow_1695134008276/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pyOpenSSL @ file:///croot/pyopenssl_1690223430423/work
+PySocks @ file:///tmp/build/80754af9/pysocks_1605305812635/work
+PyYAML==6.0.2
+requests @ file:///croot/requests_1690400202158/work
+safetensors==0.5.3
+scikit-image==0.24.0
+scipy==1.13.1
+sympy @ file:///croot/sympy_1668202399572/work
+tifffile==2024.8.30
+timm==1.0.15
+torch==2.0.0
+torchaudio==2.0.0
+torchvision==0.15.0
+tqdm==4.67.1
+triton==2.0.0
+typing_extensions @ file:///croot/typing_extensions_1690297465030/work
+urllib3 @ file:///croot/urllib3_1686163155763/work
